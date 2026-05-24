@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local-only archives and scratch outputs are not part of the public package.
+_local_archive/
+tmp_outputs/
+scratch/
