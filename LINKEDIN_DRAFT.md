@@ -22,6 +22,6 @@ Review result: artifact-backed evidence, but `scope_mismatch` / `proofwashing`; 
 
 I am not claiming originality over the phrase “uncertainty laundering.” I am using it as a useful category label for a practical review workflow.
 
-Repo, once approved: [repo link]
+Repo: https://github.com/unit27research/humility-engine
 
 Curious where people see this pattern most often: AI evals, portfolio claims, research summaries, public documentation, compliance/security language, or internal reports moving toward release?

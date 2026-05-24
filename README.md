@@ -1,8 +1,22 @@
 # Humility Engine
 
+[![CI](https://github.com/unit27research/humility-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/unit27research/humility-engine/actions/workflows/ci.yml)
+
 AI-polished writing can make weak evidence sound stronger than it is. Humility Engine is a small local instrument for evidence-boundary review: it helps a human inspect where a claim may outrun the evidence beneath it.
 
 The category is evidence-boundary review.
+
+## Release Status
+
+`SOURCE_STATUS: PUBLIC_PACKAGE`
+`ACCESS_STATUS: CLEARED_FOR_EXTERNAL_USE`
+`UNIT27_POSITION: ADJACENT_CLAIM_REVIEW_UTILITY`
+
+This repository is a released Unit27 public utility: visible, inspectable, and intended for orientation, testing, and practical use. Controlled protocol materials remain outside this source package.
+
+It answers one narrow question:
+
+> Where might a draft's public claim sound stronger than the evidence beneath it?
 
 ## Two Failure Modes
 
@@ -38,6 +52,12 @@ Humility Engine is not a verifier, fact-checker, fraud detector, certification s
 It does not browse the web, inspect external sources, validate screenshots, certify artifacts, audit code, or prove that a claim is true or false.
 
 It is a heuristic review aid. The output is a prompt for human judgment, not a final authority.
+
+## Where It Fits
+
+Humility Engine is not part of the Unit27 Field Kit Suite operating sequence. It sits beside that chain as an adjacent claim-review utility for drafts, public copy, and other human-authored release material.
+
+It is also distinct from Boundary Engine. Boundary Engine checks public repository language against recorded proof artifacts. Humility Engine helps review a draft before publication by surfacing likely uncertainty laundering, proofwashing, and scope mismatch in the language itself.
 
 ## Who It Is For
 
@@ -159,3 +179,7 @@ The scope fields matter. For example, an artifact-backed local toy demo can supp
 ```bash
 python3 -m unittest discover -s tests
 ```
+
+## License
+
+MIT

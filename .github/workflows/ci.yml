@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run unit tests
+        run: python3 -m unittest discover -s tests
+
+      - name: Compile check
+        run: PYTHONPYCACHEPREFIX=/tmp/humility_engine_pycache python3 -m py_compile humility_engine.py run.py
+
+      - name: Run review-only demo
+        run: |
+          python3 run.py examples/scenarios/medical_safety_claim.md \
+            --evidence examples/scenarios/medical_safety_claim.md \
+            --output /tmp/medical_safety_review.md \
+            --review-only
+          grep -q "proofwashing" /tmp/medical_safety_review.md
+          grep -q "scope_mismatch" /tmp/medical_safety_review.md
+          grep -q "Boundary Note" /tmp/medical_safety_review.md
+          ! grep -q "## Revised Humility-Aware Draft" /tmp/medical_safety_review.md
