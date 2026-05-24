@@ -68,12 +68,12 @@ It is also distinct from Boundary Engine. Boundary Engine checks public reposito
 
 ## Quick Demo
 
-Run the synthetic medical-safety scenario:
+Run the synthetic builder-portfolio scenario:
 
 ```bash
-python3 run.py examples/scenarios/medical_safety_claim.md \
-  --evidence examples/scenarios/medical_safety_claim.md \
-  --output examples/reviews/medical_safety_review.md \
+python3 run.py examples/scenarios/builder_portfolio_claim.md \
+  --evidence examples/scenarios/builder_portfolio_claim.md \
+  --output examples/reviews/builder_portfolio_review.md \
   --review-only
 ```
 
@@ -83,15 +83,15 @@ The output is a claim-review table with source lines, evidence strength, risk fl
 
 Overstated claim:
 
-> The model is safe for hospitals.
+> This workflow is production-ready.
 
 Evidence available:
 
-> Local checklist review on sample prompts. No clinical review. No patient data. No hospital pilot. No external validation.
+> Local demo, sample inputs, no real users, no monitoring, no deployment history.
 
 Humility Engine review result:
 
-> A local checklist review on sample prompts is supported by artifact-backed evidence. This does not establish medical or clinical safety.
+> A local demo on sample inputs is supported by artifact-backed evidence. This does not establish production readiness.
 
 ## Synthetic Demo Scenarios
 
@@ -123,7 +123,7 @@ The older full-output mode remains available for short plain-text drafts:
 python3 run.py path/to/draft.md --evidence path/to/evidence.md --output path/to/output.md
 ```
 
-Treat that revised-draft section as experimental helper text, not a source-replacement artifact. Review before release.
+If you use full-output mode, treat the generated draft as a suggestion, not an automatic replacement for your source text. Read it carefully and make any edits yourself.
 
 ## Claim Schema
 
